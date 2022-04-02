@@ -41,7 +41,7 @@ Disconnect your computer from the OpenMV camera, first by stopping the program, 
 
 Using the [pinout for the camera] and [the Romi], make three connections: two wires for the communication bus of your choice and one for `GND`. We'll add a power connection later. You may need to move connections made in previous exercises to free up the correct pins.
 
-Note that the camera is 5V tolerant, so there is no problem sending a 5V signal from the Romi to the camera. Is a 3.3V signal from the camera enough to trigger a HIGH reading on the Romi's 32U4 chip? (In case you haven't memorized the entire document yet, you can find the answer on page 383 of the [datasheet](https://ww1.microchip.com/downloads/en/devicedoc/atmel-7766-8-bit-avr-atmega16u4-32u4_datasheet.pdf).
+Note that the camera is 5V tolerant, so there is no problem sending a 5V signal from the Romi to the camera. Is a 3.3V signal from the camera enough to trigger a HIGH reading on the Romi's 32U4 chip? (In case you haven't memorized the entire document yet, you can find the answer on page 383 of the [datasheet](https://ww1.microchip.com/downloads/en/devicedoc/atmel-7766-8-bit-avr-atmega16u4-32u4_datasheet.pdf)).
 
 ## Step 4: each team member: open one of the cloned examples in VS Code
 Re-open the OpenMV IDE, load the script again, and verify that you can still read a tag. In the next step, you will save the program in a way that it isn't lost between power cycles, but when you do that, you can't use the USB connection for debugging, and it is important to verify functionality first.
