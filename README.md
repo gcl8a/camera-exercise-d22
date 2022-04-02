@@ -19,6 +19,16 @@ For these exercises, you will need to mount the camera on your Romi using the ca
 
 You will also need to install the OpenMV IDE; versions for all three of the major operating systems can be found on the [OpenMV](https://openmv.io) website.
 
+## Prepare your previous repos
+In your previous group assignment you worked on a wall follower. In that assignment you used a PI controller to control speed and a PD controller to control distance. In this assignment you will add the camera module. Your Romi will follow the wall at a specified distance and velocity, until it detects an APRIL tag on the wall. Therefore, you will need to reuse code from your previous group repositories. You have two options: 1) you  copy and paste code or 2) you modify (clean up) your previous repos and include them as libraries in the repository for this assignment. If you choose the latter option, you will receive an additional 10% to your overall grade for your group assignment. 
+
+## Option 2: cleaning up repositories and including them as library
+You seem to continue reading which implies that you chose to add your previous code via libraries to this brand new repository. First, you need to go back to your previous assignment (i.e., wall follower) and restructure your code into classes. Once your code is structured as classes and can be easily used by creating objects of your classes, you can include it in this repository. Do so by adding the ``REPO ADDRESS`` to your lib_deps in platformio.ini as shown below.
+
+TODO: add screenshot of lib_deps.
+
+Now you can access your code, 
+
 ## Step 0: decide who will use which communication protocol
 Each student will implement one of the communication protocols to connect the camera and the Romi. At least one person from each team must implement the UART and one person the I2C -- part of this exercise is to compare the two protocols and justify your decision for one over the other.
 
