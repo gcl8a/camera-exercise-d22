@@ -4,8 +4,6 @@ This is your third group assignment. Please follow the exact instructions below 
 ## Overview
 Upon completion of this activity, you will have a robot that can detect [AprilTags](https://april.eecs.umich.edu/software/apriltag) and use them for basic navigation. 
 
-%%As an _individual_ exercise, you will first program your robot to track and follow an AprilTag. As a group, you will then build on your wall following code from the last exercise and add basic navigation using AprilTags as cues.%%
-
 Starting with your wall following code from the last exercise, you will first _individually_ program your robot so that it follows a wall until it detects an AprilTag, at which point it will stop. Then, working as a group, you will program the Romi to detect and approach a tag to a specified distance.
 
 ## Background and preparation
