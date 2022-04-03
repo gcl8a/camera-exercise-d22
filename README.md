@@ -1,5 +1,3 @@
-(#todo Title may need to be changed. Obviously, steps will need re-numbering.)
-
 # Lab exercise: Using AprilTags for Navigation
 This is your third group assignment. Please follow the exact instructions below to receive full points. It is important that you create > 10 commits for each demonstration. **If you copy and paste code, and push it with a single commit, you risk earning a low grade.** Individual and group grades may vary.
 
@@ -9,9 +7,9 @@ Upon completion of this activity, you will have a robot that can detect [AprilTa
 Starting with your wall following code from the last exercise, you will first _individually_ program your robot so that it follows a wall until it detects an AprilTag, at which point it will stop. Then, working as a group, you will program the Romi to detect and approach a tag to a specified distance.
 
 ## Background and preparation
-The [OpenMV](https://openmv.io) camera is a low-cost, extensible, machine vision _module_ designed to "bring machine vision algorithms closer to makers and hobbyists" -- OpenMV strives to be the "Arduino of computer vision." Though we often refer to it simply as a "camera," the OpenMV breakout includes not only the camera, but also a powerful on-board processor. The OpenMV _ecosystem_ includes a pile of example codes to do everything from face detection to optical flow to much more. Though we won't be using it here, the creators have even tied it in with the [Edge Impulse](https://edgeimpulse.com) machine learning engine to do powerful image recognition. You are encouraged to load some of the sample programs onto the device and try them out!
+The [OpenMV](https://openmv.io) camera is a low-cost, extensible, machine vision module designed to "bring machine vision algorithms closer to makers and hobbyists" -- OpenMV strives to be the "Arduino of computer vision." Though we often refer to it simply as a "camera," the OpenMV breakout includes not only the camera, but also a powerful on-board processor. In addition, the OpenMV IDE  includes a pile of example codes to do everything from face detection to optical flow to much more. Though we won't be using it here, the creators have even tied it in with the [Edge Impulse](https://edgeimpulse.com) machine learning engine to do powerful image recognition. You are encouraged to load some of the sample programs onto the device and try them out!
 
-[AprilTag](https://april.eecs.umich.edu/software/apriltag) is "a visual fiducial system, useful for a wide variety of tasks including augmented reality, robotics, and camera calibration." One can easily print a variety of AprilTags and use them as landmarks for navigation or for detecting other robots. In your final project, your Romi will register AprilTags as it drives around the arena, which will provide cues to help it navigate.
+[AprilTag](https://april.eecs.umich.edu/software/apriltag) is "a visual fiducial system, useful for a wide variety of tasks including augmented reality, robotics, and camera calibration." One can easily print a variety of AprilTags and use them as landmarks for navigation or for [detecting other robots](https://april.eecs.umich.edu/media/apriltag/apriltagrobots_overlay.jpg). In your final project, your Romi will register AprilTags as it drives around the arena, which will provide cues to help it navigate.
 
 The OpenMV camera is programmed using [MicroPython](http://micropython.org), a variation of Python3 that is optimized for running on microcontrollers. We have modified the OpenMV example scripts to allow the camera to communicate with your robot -- there is a version that communicates via the UART and another that uses I2C. Your team will explore both versions. (We'll give you a non-functional bonus point if you can tell us why we didn't we create an SPI version.)
 
@@ -20,14 +18,24 @@ For these exercises, you will need to mount the camera on your Romi using the ca
 You will also need to install the OpenMV IDE; versions for all three of the major operating systems can be found on the [OpenMV](https://openmv.io) website.
 
 ## Prepare your previous repos
-In your previous group assignment you worked on a wall follower. In that assignment you used a PI controller to control speed and a PD controller to control distance. In this assignment you will add the camera module. Your Romi will follow the wall at a specified distance and velocity, until it detects an APRIL tag on the wall. Therefore, you will need to reuse code from your previous group repositories. You have two options: 1) you  copy and paste code or 2) you modify (clean up) your previous repos and include them as libraries in the repository for this assignment. If you choose the latter option, you will receive an additional 10% to your overall grade for your group assignment. 
+In your previous group assignment you worked on a wall follower. In that assignment you used a PI controller to control speed and a PD controller to control distance. In this assignment you will add the camera module. Your Romi will follow the wall at a specified distance and velocity, until it detects an AprilTag on the wall. Therefore, you will need to reuse code from your previous group repositories. You have two options: 1) you  copy and paste code or 2) you modify (clean up) your previous repos and include them as libraries in the repository for this assignment. If you choose the latter option, you will receive an additional 10% to your overall grade for your group assignment. 
 
-## Option 2: cleaning up repositories and including them as library
-You seem to continue reading which implies that you chose to add your previous code via libraries to this brand new repository. First, you need to go back to your previous assignment (i.e., wall follower) and restructure your code into classes. Once your code is structured as classes and can be easily used by creating objects of your classes, you can include it in this repository. Do so by adding the ``REPO ADDRESS`` to your lib_deps in platformio.ini as shown below.
+### Option 1: copy/paste
+For this option, simply copy the files of interest into this repository. 
+
+### Option 2: cleaning up repositories and including them as library
+You are continuing to read, which implies that you are considering adding your previous code via libraries to this new repository. First, you need to go back to your previous assignment (i.e., the wall follower code) and restructure your code into classes. Once your code is structured as classes, it can be easily used by creating objects of your classes, and you can include it in this repository. Do so by adding the ``REPO ADDRESS`` to your lib_deps in platformio.ini as shown below.
 
 TODO: add screenshot of lib_deps.
-
-Now you can access your code, 
+```
+lib_deps =
+	wpiroboticsengineering/wpi-32u4-library@2.8.0
+	https://github.com/D22-RBE2002/group-assignment-velocity-control-alpha-super-cool-dynamite-wolf-squadron
+```
+Now you can access your code by using standard include statements,
+```
+#include <myWallFollower.h>
+```
 
 ## Step 0: decide who will use which communication protocol
 Each student will implement one of the communication protocols to connect the camera and the Romi. At least one person from each team must implement the UART and one person the I2C -- part of this exercise is to compare the two protocols and justify your decision for one over the other.
