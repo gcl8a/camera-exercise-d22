@@ -56,7 +56,7 @@ Open the OpenMV IDE and the example python script of your choice (either the I2C
 ## Step 3: connect the camera to the Romi
 Disconnect your computer from the OpenMV camera, first by stopping the program, then by pressing the disconnect button in the IDE. Remove the USB cable. **Make sure that no power is going to either the camera or the Romi while you are wiring them together.**
 
-Using the [pinout for the camera] and [the Romi], make three connections: two wires for the communication bus of your choice and one for `GND`. We'll add a power connection later. You may need to move connections made in previous exercises to free up the correct pins.
+Following the instructions in the repository, make three connections: two wires for the communication bus of your choice and one for `GND`. We'll add a power connection later. You may need to move connections made in previous exercises to free up the correct pins.
 
 Note that the camera is 5V tolerant, so there is no problem sending a 5V signal from the Romi to the camera. Is a 3.3V signal from the camera enough to trigger a HIGH reading on the Romi's 32U4 chip? (In case you haven't memorized the entire document yet, you can find the answer on page 383 of the [datasheet](https://ww1.microchip.com/downloads/en/devicedoc/atmel-7766-8-bit-avr-atmega16u4-32u4_datasheet.pdf)).
 
@@ -70,6 +70,8 @@ As described [here](https://docs.openmv.io/openmvcam/tutorial/openmvide_overview
 
 ## Step N: Wall following with cues
 Starting with your wall following code from last week, add code so that your robot follows a wall at 30cm offset and monitors the wall for a given AprilTag, which will be mounted on the edge of the arena. When the robot detects the tag, it must stop and enter an idle state. You may not use a simple `while()` loop, but you must add to the basic state machine from last week. The state machine must be programmed such that the button can be pressed again to restart the line following.
+
+[SIGN-OFF: 1]
 
 ## Step N: As a group, decide which communication method you will use
 Discuss the pros and cons of each of the communication methods. Choose which method your team will use for the group activity. You are expected to make a _positive statement_ about your choice in your commit message.
@@ -87,7 +89,7 @@ Prepare Demo 2 in which you showcase your Romi to a SA (i) searching for and det
 
 [SIGN-OFF: 2]
 
-Create a release of your code in GitHub and call it: `demo 2 YOUR-GROUP-NAME`. As tag, enter 3.0.0.
+Create a release of your code in GitHub and call it: `demo 3 YOUR-GROUP-NAME`. As tag, enter 3.0.0.
 
 
 
