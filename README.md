@@ -24,7 +24,7 @@ In your previous group assignment you worked on a wall follower. In that assignm
 For this option, simply copy the files of interest into this repository. 
 
 #### Option 2: cleaning up repositories and including them as library
-You are continuing to read, which implies that you are considering adding your previous code via libraries to this new repository. First, you need to go back to your previous assignment (i.e., the wall follower code) and restructure your code into classes. Once your code is structured as classes, it can be easily used by creating objects of your classes, and you can include it in this repository. Do so by adding the repository address to your `lib_deps` in `platformio.ini` file, as shown below.
+You are continuing to read, which implies that you are considering adding your previous code via libraries to this new repository. First, you need to go back to your previous assignment (i.e., the wall follower code) and restructure your code into classes. Once your code is structured as classes, it can be easily used by creating objects of your classes, and you can include it in this repository. Do so by adding the repository address to your `lib_deps` in `platformio.ini` file, as exemplarily shown below.
 
 ```
 lib_deps =
@@ -73,6 +73,8 @@ Starting with your wall following code from last week, add code so that your rob
 
 [SIGN-OFF: 1]
 
+Create a release of your code in GitHub and call it: `demo 1 YOUR-NAME`. As tag, enter 1.0.X.
+
 ## Step 8: As a group, decide which communication method you will use
 Discuss the pros and cons of each of the communication methods. Choose which method your team will use for the group activity. You are expected to make a _positive statement_ about your choice in your commit message.
 
@@ -89,5 +91,5 @@ Prepare Demo 2 in which you showcase your Romi to a SA (i) searching for and det
 
 [SIGN-OFF: 2]
 
-Create a release of your code in GitHub and call it: `demo 3 YOUR-GROUP-NAME`. As tag, enter 3.0.0.
+Create a release of your code in GitHub and call it: `demo 2 YOUR-GROUP-NAME`. As tag, enter 2.0.0.
 
