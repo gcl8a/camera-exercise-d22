@@ -33,19 +33,19 @@ lib_deps =
 ```
 Now you can access your code by using standard include statements,
 ```
-#include <myWallFollower.h>
+#include <myAwesomeWallFollower.h>
 ```
 
 ## Step 0: decide who will use which communication protocol
-Each student will implement one of the communication protocols to connect the camera and the Romi. At least one person from each team must implement the UART and one person the I2C -- part of this exercise is to compare the two protocols and justify your decision for one over the other.
+Each student will implement one of the communication protocols to connect the camera and the Romi. At least one person from each team must implement the UART interface and one person the I2C -- part of this exercise is to compare the two protocols and justify your decision for one over the other.
 
 ## Step 1: each team member: clone this repository to your computer
 Clone this repository to your local machine.
 ```
 git clone <PASTE THE REPO ADDRESS HERE>
 ```
-The repository contains sample code for _both_ the Romi and the OpenMV camera.
 
+Clone [WPI's AprilTag library](https://github.com/WPIRoboticsEngineering/openmv-apriltags) to your computer. The repository contains AprilTag library files and sample code for _both_ the Romi and the OpenMV camera.
 
 ## Step 2: create files and branches
 As you have done in previous exercises, create a personal file with your name and id and your own branch.
