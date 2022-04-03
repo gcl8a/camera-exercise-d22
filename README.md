@@ -24,9 +24,8 @@ In your previous group assignment you worked on a wall follower. In that assignm
 For this option, simply copy the files of interest into this repository. 
 
 ### Option 2: cleaning up repositories and including them as library
-You are continuing to read, which implies that you are considering adding your previous code via libraries to this new repository. First, you need to go back to your previous assignment (i.e., the wall follower code) and restructure your code into classes. Once your code is structured as classes, it can be easily used by creating objects of your classes, and you can include it in this repository. Do so by adding the ``REPO ADDRESS`` to your lib_deps in platformio.ini as shown below.
+You are continuing to read, which implies that you are considering adding your previous code via libraries to this new repository. First, you need to go back to your previous assignment (i.e., the wall follower code) and restructure your code into classes. Once your code is structured as classes, it can be easily used by creating objects of your classes, and you can include it in this repository. Do so by adding the repository address to your `lib_deps` in `platformio.ini` file, as shown below.
 
-TODO: add screenshot of lib_deps.
 ```
 lib_deps =
 	wpiroboticsengineering/wpi-32u4-library@2.8.0
