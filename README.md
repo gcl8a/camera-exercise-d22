@@ -1,5 +1,5 @@
 # Lab exercise: Using AprilTags for Navigation
-This is your third group assignment. Please follow the exact instructions below to receive full points. It is important that you create > 10 commits for each demonstration. **If you copy and paste code, and push it with a single commit, you risk earning a low grade.** Individual and group grades may vary.
+This is your third group assignment. Please follow the instructions below to receive full points. It is important that you create > 10 commits for each demonstration. Be sure to create commits for each part of your process so we can see what you did. Individual and group grades may vary.
 
 ## Overview
 Upon completion of this activity, you will have a robot that can detect [AprilTags](https://april.eecs.umich.edu/software/apriltag) and use them for basic navigation. 
