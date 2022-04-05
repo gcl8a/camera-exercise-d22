@@ -51,7 +51,7 @@ Clone [WPI's AprilTag library](https://github.com/WPIRoboticsEngineering/openmv-
 As you have done in previous exercises, create a personal file with your name and id and your own branch.
 
 ## Step 3: each team member: load one of the example scripts onto the OpenMV camera
-Open the OpenMV IDE and the example python script of your choice (either the I2C or UART version) from this repository. Connect the camera to your computer with a USB cable and, following instructions on the [OpenMV website](), upload the script to the camera. Open the Serial Monitor in the OpenMV IDE and hold an AprilTag in front of the camera. It should print off information about the tag.
+Open the OpenMV IDE and the example python script of your choice (either the I2C or UART version) from the AprilTag repository. Connect the camera to your computer with a USB cable and, following instructions on the [OpenMV website](), upload the script to the camera. Open the Serial Monitor in the OpenMV IDE and hold an AprilTag in front of the camera. It should print off information about the tag.
 
 ## Step 4: connect the camera to the Romi
 Disconnect your computer from the OpenMV camera, first by stopping the program, then by pressing the disconnect button in the IDE. Remove the USB cable. **Make sure that no power is going to either the camera or the Romi while you are wiring them together.**
@@ -63,13 +63,24 @@ Note that the camera is 5V tolerant, so there is no problem sending a 5V signal 
 ## Step 5: each team member: open one of the cloned examples in VS Code
 Re-open the OpenMV IDE, load the script again, and verify that you can still read a tag. In the next step, you will save the program in a way that it isn't lost between power cycles, but when you do that, you can't use the USB connection for debugging, and it is important to verify functionality first.
 
-Open the corresponding example code from this repository in VSCode. Upload it to the Romi. Open the Serial Monitor in platformio and verify that _the Romi_ can detect the tag.
+Open the corresponding example code from the AprilTag repository in VSCode. Upload it to the Romi. Open the Serial Monitor in platformio and verify that _the Romi_ can detect the tag.
 
 ## Step 6: "headless" camera operation
 As described [here](https://docs.openmv.io/openmvcam/tutorial/openmvide_overview.html#tools), save the open python script as `main.py` on the camera. **Disconnect all power from both devices** and add a connection from 5V on your Romi to the `VIN` pin on the camera. Have someone independently check your wiring. Reconnect the USB to the Romi, which should also power the camera. Verify that you can still detect the tag.
 
 ## Step 7: Wall following with cues
-Starting with your wall following code from last week, add code so that your robot follows a wall at 30cm offset and monitors the wall for a given AprilTag, which will be mounted on the edge of the arena. When the robot detects the tag, it must stop and enter an idle state. You may not use a simple `while()` loop, but you must add to the basic state machine from last week. The state machine must be programmed such that the button can be pressed again to restart the line following.
+Starting with your wall following code from last week, create code in *this* repository so that your robot follows a wall at 30cm offset and monitors the wall for a given AprilTag, which will be mounted on the edge of the arena. When the robot detects the tag, it must stop and enter an idle state. You may not use a simple `while()` loop, but you must add to the basic state machine from last week. The state machine must be programmed such that the button can be pressed again to restart the line following.
+
+Notet that you have two options for including the AprilTag library:
+
+1) You can include the library through `lib_deps`, much as you have done before, or
+2) Since you have cloned the AprilTag repo to your machine, you can include the local version using `lib_extra_dirs`, for example,
+
+```
+lib_extra_dirs =
+    <path to local directory where you cloned the repo
+```
+The advantage of this method is that you can edit the library files if you wish. The downside is that each individual will have a different local directory, so you will need to add `platformio.ini` to your `.gitignore` file. 
 
 [SIGN-OFF: 1]
 
