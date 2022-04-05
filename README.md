@@ -13,7 +13,7 @@ The [OpenMV](https://openmv.io) camera is a low-cost, extensible, machine vision
 
 The OpenMV camera is programmed using [MicroPython](http://micropython.org), a variation of Python3 that is optimized for running on microcontrollers. We have modified the OpenMV example scripts to allow the camera to communicate with your robot -- there is a version that communicates via the UART and another that uses I2C. Your team will explore both versions. (We'll give you a non-functional bonus point if you can tell us why we didn't we create an SPI version.)
 
-For these exercises, you will need to mount the camera on your Romi using the camera mount provided. The wiring will depend on which example program you choose to use. There are instructions for both wiring and implementing the library in the repository's readme's.
+For these exercises, you will need to mount the camera on your Romi using one of the camera mounts provided. The wiring will depend on which example program you choose to use. There are instructions for both wiring and implementing the library in the repository's readme's.
 
 You will also need to install the OpenMV IDE; versions for all three of the major operating systems can be found on the [OpenMV](https://openmv.io) website.
 
