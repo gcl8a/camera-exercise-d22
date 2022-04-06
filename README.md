@@ -51,7 +51,7 @@ Clone [WPI's AprilTag library](https://github.com/WPIRoboticsEngineering/openmv-
 As you have done in previous exercises, create a personal file with your name and id and your own branch.
 
 ## Step 3: each team member: load one of the example scripts onto the OpenMV camera
-Open the OpenMV IDE and the example python script of your choice (either the I2C or UART version) from the AprilTag repository. Connect the camera to your computer with a USB cable and, following instructions on the [OpenMV website](), upload the script to the camera. Open the Serial Monitor in the OpenMV IDE and hold an AprilTag in front of the camera. It should print off information about the tag.
+Open the OpenMV IDE and the example python script of your choice (either the I2C or UART version) from the AprilTag repository. Connect the camera to your computer with a USB cable and, following instructions on the [OpenMV website](https://openmv.io), upload the script to the camera. Open the Serial Monitor in the OpenMV IDE and hold an AprilTag in front of the camera. It should print off information about the tag.
 
 ## Step 4: connect the camera to the Romi
 Disconnect your computer from the OpenMV camera, first by stopping the program, then by pressing the disconnect button in the IDE. Remove the USB cable. **Make sure that no power is going to either the camera or the Romi while you are wiring them together.**
